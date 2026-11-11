@@ -1,0 +1,336 @@
+{
+  "layer0_nli": {
+    "description": "FEVER-format NLI corpus. Evidence is Wikipedia sentence IDs; raw text requires the FEVER Wikipedia dump (~13 GB).",
+    "file": "layer0_nli/train.jsonl",
+    "records": 145449,
+    "label_distribution_approx": {
+      "SUPPORTS": 80035,
+      "REFUTES": 29775,
+      "NOT_ENOUGH_INFO": 35639
+    },
+    "human_verified": false,
+    "source_note": "FEVER dataset (Thorne et al., 2018), redistributed subset",
+    "caution": "Evidence fields contain Wikipedia doc_id + sentence_index only. Passage text must be recovered from the FEVER Wikipedia dump."
+  },
+  "layer1_nli": {
+    "description": "Custom NLI dataset with hand-crafted claim/evidence pairs. Used for fine-tuning NLI backbone after pre-training on Layer 0.",
+    "splits": {
+      "train.csv": {
+        "records": 240,
+        "labels": {
+          "REFUTES": 80,
+          "SUPPORTS": 80,
+          "NOT_ENOUGH_INFO": 80
+        },
+        "topics": {
+          "Economics": 18,
+          "Geography": 18,
+          "History": 27,
+          "Politics and government": 9,
+          "Education": 18,
+          "Space": 18,
+          "Culture": 18,
+          "Famous people": 18,
+          "Companies and organizations": 9,
+          "Sports": 27,
+          "Environment": 9,
+          "Medicine and health": 27,
+          "Science": 12,
+          "Technology": 12
+        },
+        "difficulty": {
+          "hard": 80,
+          "medium": 120,
+          "easy": 40
+        },
+        "claim_types": {
+          "number": 27,
+          "comparison": 27,
+          "person": 30,
+          "definition": 54,
+          "location": 18,
+          "relationship": 9,
+          "organization": 18,
+          "event": 18,
+          "cause_effect": 30,
+          "scientific": 9
+        }
+      },
+      "validation.csv": {
+        "records": 30,
+        "labels": {
+          "SUPPORTS": 10,
+          "REFUTES": 10,
+          "NOT_ENOUGH_INFO": 10
+        },
+        "topics": {
+          "General knowledge": 3,
+          "Science": 9,
+          "Technology": 6,
+          "Politics and government": 3,
+          "Environment": 3,
+          "Companies and organizations": 6
+        },
+        "difficulty": {
+          "medium": 15,
+          "hard": 10,
+          "easy": 5
+        },
+        "claim_types": {
+          "comparison": 3,
+          "definition": 6,
+          "organization": 12,
+          "date": 3,
+          "cause_effect": 3,
+          "scientific": 3
+        }
+      },
+      "test.csv": {
+        "records": 30,
+        "labels": {
+          "REFUTES": 10,
+          "SUPPORTS": 10,
+          "NOT_ENOUGH_INFO": 10
+        },
+        "topics": {
+          "Geography": 6,
+          "Science": 6,
+          "Politics and government": 3,
+          "Space": 6,
+          "Technology": 3,
+          "General knowledge": 3,
+          "History": 3
+        },
+        "difficulty": {
+          "hard": 6,
+          "easy": 7,
+          "medium": 17
+        },
+        "claim_types": {
+          "comparison": 3,
+          "scientific": 15,
+          "organization": 3,
+          "location": 3,
+          "definition": 3,
+          "date": 3
+        }
+      }
+    },
+    "total_records": 300,
+    "human_verified": false,
+    "source_note": "synthetic_llm_authored",
+    "note": "Preamble phrases in claim text ('A verifier is asked to determine whether...') are NLI-style prefixes; they do not encode the gold label."
+  },
+  "layer2_retrieval": {
+    "description": "Passage pool and retrieval candidate sets for evidence retrieval training and evaluation.",
+    "passage_pool": {
+      "records": 302,
+      "topic_distribution": {
+        "Technology": 21,
+        "Science": 21,
+        "History": 20,
+        "Geography": 20,
+        "Politics and government": 20,
+        "Economics": 20,
+        "Sports": 20,
+        "Medicine and health": 20,
+        "Environment": 20,
+        "Education": 20,
+        "Space": 20,
+        "Companies and organizations": 20,
+        "Famous people": 20,
+        "Culture": 20,
+        "General knowledge": 20
+      },
+      "source_distribution": {
+        "Wikipedia": 91,
+        "scientific": 126,
+        "official_organization": 53,
+        "government": 25,
+        "other": 7
+      }
+    },
+    "claim_candidates": {
+      "records": 1200,
+      "candidates_per_claim": 5,
+      "role_distribution": {
+        "GOLD_REFUTE": 80,
+        "PARTIAL": 320,
+        "TOPICALLY_RELATED": 240,
+        "IRRELEVANT": 480,
+        "GOLD_SUPPORT": 80
+      }
+    },
+    "retrieval_test": {
+      "records": 500,
+      "candidates_per_claim": 10
+    },
+    "human_verified": false,
+    "source_note": "synthetic_llm_authored",
+    "limitation": "Passage pool is ~300 passages, not 50,000. Suitable for prototype retrieval demo; not for production-scale ANN benchmarking."
+  },
+  "layer3_claim_extraction": {
+    "description": "Sentence-level claim extraction annotations on realistic AI-generated paragraphs.",
+    "raw_ai_outputs": {
+      "records": 150,
+      "topic_distribution": {
+        "Technology": 10,
+        "Science": 10,
+        "History": 10,
+        "Geography": 10,
+        "Politics and government": 10,
+        "Economics": 10,
+        "Sports": 10,
+        "Medicine and health": 10,
+        "Environment": 10,
+        "Education": 10,
+        "Space": 10,
+        "Companies and organizations": 10,
+        "Famous people": 10,
+        "Culture": 10,
+        "General knowledge": 10
+      }
+    },
+    "claim_spans_train": {
+      "records": 585,
+      "factual_claim_sentences": 490,
+      "non_factual_sentences": 95,
+      "factual_pct": 83.8
+    },
+    "claim_extraction_test": {
+      "records": 104
+    },
+    "human_verified": false,
+    "source_note": "synthetic_llm_authored"
+  },
+  "layer4_end_to_end": {
+    "description": "End-to-end evaluation set with realistic AI-generated responses containing actual hallucinations. Highest-quality data in the dataset.",
+    "file": "layer4_end_to_end/ai_generated_evaluation.csv",
+    "records": 15,
+    "unique_generated_texts": 8,
+    "label_distribution": {
+      "SUPPORTS": 8,
+      "REFUTES": 4,
+      "NOT_ENOUGH_INFO": 3
+    },
+    "human_verified": false,
+    "source_note": "synthetic_llm_authored"
+  },
+  "layer5_heldout": {
+    "description": "Held-out evaluation benchmark. Realistic AI-generated responses with no label-signaling text. Never use for training.",
+    "heldout_responses": {
+      "records": 200,
+      "topic_distribution": {
+        "Technology": 14,
+        "Science": 14,
+        "History": 14,
+        "Geography": 14,
+        "Politics and government": 14,
+        "Economics": 13,
+        "Sports": 13,
+        "Medicine and health": 13,
+        "Environment": 13,
+        "Education": 13,
+        "Space": 13,
+        "Companies and organizations": 13,
+        "Famous people": 13,
+        "Culture": 13,
+        "General knowledge": 13
+      },
+      "style_distribution": {
+        "explanatory_paragraph": 29,
+        "bullet_points": 29,
+        "comparison": 29,
+        "short_answer": 29,
+        "historical_narrative": 28,
+        "technical": 28,
+        "conversational": 28
+      },
+      "verdict_distribution": {
+        "Mostly inaccurate": 42,
+        "Mixed factuality": 154,
+        "Mostly factual": 2,
+        "Fully factual": 2
+      },
+      "claims_per_response_distribution": {
+        "3": 40,
+        "4": 60,
+        "5": 60,
+        "6": 30,
+        "7": 10
+      },
+      "mixed_label_responses": 192,
+      "mixed_label_pct": 96.0
+    },
+    "heldout_claims": {
+      "records": 910,
+      "label_distribution": {
+        "REFUTES": 342,
+        "NOT_ENOUGH_INFO": 215,
+        "SUPPORTS": 353
+      },
+      "claim_type_distribution": {
+        "scientific": 142,
+        "location": 161,
+        "organization": 87,
+        "date": 151,
+        "person": 117,
+        "definition": 186,
+        "event": 34,
+        "number": 32
+      },
+      "difficulty_distribution": {
+        "easy": 177,
+        "medium": 404,
+        "hard": 329
+      },
+      "hallucination_type_distribution_refutes_only": {
+        "incorrect_technical_specification": 30,
+        "geographic_substitution": 31,
+        "incorrect_scientific_property": 22,
+        "wrong_location": 39,
+        "wrong_year": 43,
+        "wrong_person": 33,
+        "entity_substitution": 39,
+        "historical_misattribution": 34,
+        "negation_error": 39,
+        "wrong_number": 32
+      }
+    },
+    "heldout_evidence": {
+      "records": 4550,
+      "candidates_per_claim": 5,
+      "role_distribution": {
+        "GOLD_REFUTE": 342,
+        "PARTIAL": 910,
+        "TOPICALLY_RELATED": 910,
+        "IRRELEVANT": 1820,
+        "NEI_EVIDENCE": 215,
+        "GOLD_SUPPORT": 353
+      }
+    },
+    "human_verified": false,
+    "source_note": "synthetic_llm_authored",
+    "usage_restriction": "Must not be used during model training, embedding training, retrieval training, reranking training, hyperparameter tuning, or prompt optimization. Final evaluation only."
+  },
+  "overall": {
+    "total_nli_records": 145749,
+    "total_custom_claims": 1210,
+    "total_passages": 302,
+    "total_retrieval_candidates": 1700,
+    "total_ce_documents": 150,
+    "total_heldout_responses": 200,
+    "layers": [
+      "layer0_nli",
+      "layer1_nli",
+      "layer2_retrieval",
+      "layer3_claim_extraction",
+      "layer4_end_to_end",
+      "layer5_heldout"
+    ],
+    "dataset_version": "2.0",
+    "created": "2026-09-13",
+    "human_verified": false,
+    "source_note": "Layers 1-5 are synthetic_llm_authored. Layer 0 is FEVER corpus."
+  }
+}

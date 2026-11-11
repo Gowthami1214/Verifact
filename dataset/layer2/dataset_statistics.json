@@ -1,0 +1,63 @@
+{
+  "records": {
+    "train": 240,
+    "validation": 30,
+    "test": 30
+  },
+  "class_distribution": {
+    "train": {
+      "REFUTES": 80,
+      "SUPPORTS": 80,
+      "NOT_ENOUGH_INFO": 80
+    },
+    "validation": {
+      "SUPPORTS": 10,
+      "REFUTES": 10,
+      "NOT_ENOUGH_INFO": 10
+    },
+    "test": {
+      "REFUTES": 10,
+      "SUPPORTS": 10,
+      "NOT_ENOUGH_INFO": 10
+    }
+  },
+  "topic_distribution": {
+    "Economics": 18,
+    "Geography": 24,
+    "History": 30,
+    "Politics and government": 15,
+    "Education": 18,
+    "Space": 24,
+    "Culture": 18,
+    "Famous people": 18,
+    "Companies and organizations": 15,
+    "Sports": 27,
+    "Environment": 12,
+    "Medicine and health": 27,
+    "Science": 27,
+    "Technology": 21,
+    "General knowledge": 6
+  },
+  "claim_type_distribution": {
+    "number": 27,
+    "comparison": 33,
+    "person": 30,
+    "definition": 63,
+    "location": 21,
+    "relationship": 9,
+    "organization": 33,
+    "event": 18,
+    "cause_effect": 33,
+    "scientific": 27,
+    "date": 6
+  },
+  "difficulty_distribution": {
+    "hard": 96,
+    "medium": 152,
+    "easy": 52
+  },
+  "duplicate_claims": 0,
+  "missing_value_count": 0,
+  "cross_split_duplicate_claims": 0,
+  "evaluation_records": 15
+}

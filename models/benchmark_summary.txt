@@ -1,0 +1,27 @@
+=================================================================
+BENCHMARK RESULTS
+=================================================================
+
+Evaluated:  20 responses  |  84 matched claims
+
+CLAIM-LEVEL
+  Accuracy       : 0.4167
+  Macro-F1       : 0.3732
+  Macro-Precision: 0.4010
+  Macro-Recall   : 0.3817
+
+  Per-class:
+    SUPPORTS              P=0.412  R=0.250  F1=0.311  support=28
+    REFUTES               P=0.434  R=0.657  F1=0.523  support=35
+    NOT_ENOUGH_INFO       P=0.357  R=0.238  F1=0.286  support=21
+
+  Predicted label distribution:
+    SUPPORTS            : 17
+    REFUTES             : 53
+    NOT_ENOUGH_INFO     : 14
+
+RESPONSE-LEVEL
+  Verdict accuracy : 0.3500 (7/20)
+  Score MAE        : 0.2568
+  Score Pearson r  : -0.1069
+=================================================================

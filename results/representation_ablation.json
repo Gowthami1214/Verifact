@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "format": "plain",
+      "desc": "evidence [SEP] claim",
+      "accuracy": 0.6095238095238096,
+      "macro_f1": 0.6210607070034119
+    },
+    {
+      "format": "evidence_claim",
+      "desc": "Evidence: <ev> [SEP] Claim: <cl>",
+      "accuracy": 0.5904761904761905,
+      "macro_f1": 0.5939416570484531
+    },
+    {
+      "format": "claim_evidence",
+      "desc": "Claim: <cl> [SEP] Evidence: <ev>",
+      "accuracy": 0.6190476190476191,
+      "macro_f1": 0.6262149626940915
+    },
+    {
+      "format": "premise_hypothesis",
+      "desc": "Premise: <ev> [SEP] Hypothesis: <cl>",
+      "accuracy": 0.6,
+      "macro_f1": 0.6041165184022327
+    },
+    {
+      "format": "hypothesis_premise",
+      "desc": "Hypothesis: <cl> [SEP] Premise: <ev>",
+      "accuracy": 0.6,
+      "macro_f1": 0.6143906655142609
+    }
+  ],
+  "best": {
+    "format": "claim_evidence",
+    "desc": "Claim: <cl> [SEP] Evidence: <ev>",
+    "accuracy": 0.6190476190476191,
+    "macro_f1": 0.6262149626940915
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "n_responses": 20,
+  "n_matched_claims": 84,
+  "claim_metrics": {
+    "accuracy": 0.4167,
+    "macro_f1": 0.3732,
+    "macro_p": 0.401,
+    "macro_r": 0.3817,
+    "per_class": {
+      "SUPPORTS": {
+        "precision": 0.4118,
+        "recall": 0.25,
+        "f1": 0.3111,
+        "support": 28
+      },
+      "REFUTES": {
+        "precision": 0.434,
+        "recall": 0.6571,
+        "f1": 0.5227,
+        "support": 35
+      },
+      "NOT_ENOUGH_INFO": {
+        "precision": 0.3571,
+        "recall": 0.2381,
+        "f1": 0.2857,
+        "support": 21
+      }
+    },
+    "confusion_matrix": {
+      "REFUTES": {
+        "REFUTES": 23,
+        "NOT_ENOUGH_INFO": 7,
+        "SUPPORTS": 5
+      },
+      "NOT_ENOUGH_INFO": {
+        "NOT_ENOUGH_INFO": 5,
+        "REFUTES": 11,
+        "SUPPORTS": 5
+      },
+      "SUPPORTS": {
+        "REFUTES": 19,
+        "NOT_ENOUGH_INFO": 2,
+        "SUPPORTS": 7
+      }
+    }
+  },
+  "response_metrics": {
+    "verdict_accuracy": 0.35,
+    "score_mae": 0.2568,
+    "score_pearson_r": -0.1069
+  },
+  "per_response": [
+    {
+      "response_id": "L5_001",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.0,
+      "gold_score": 0.0,
+      "n_claims": 6
+    },
+    {
+      "response_id": "L5_002",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.0,
+      "gold_score": 0.67,
+      "n_claims": 3
+    },
+    {
+      "response_id": "L5_003",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.0,
+      "gold_score": 0.67,
+      "n_claims": 3
+    },
+    {
+      "response_id": "L5_004",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.2,
+      "gold_score": 0.6,
+      "n_claims": 5
+    },
+    {
+      "response_id": "L5_005",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.0,
+      "gold_score": 0.0,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_006",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.25,
+      "gold_score": 0.5,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_007",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.5,
+      "gold_score": 0.2,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_008",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.0,
+      "gold_score": 0.0,
+      "n_claims": 3
+    },
+    {
+      "response_id": "L5_009",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.5,
+      "gold_score": 0.5,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_010",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.2,
+      "gold_score": 0.4,
+      "n_claims": 5
+    },
+    {
+      "response_id": "L5_011",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.25,
+      "gold_score": 0.5,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_012",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.5,
+      "gold_score": 0.33,
+      "n_claims": 2
+    },
+    {
+      "response_id": "L5_013",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.3333,
+      "gold_score": 0.33,
+      "n_claims": 3
+    },
+    {
+      "response_id": "L5_014",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mostly inaccurate",
+      "pred_score": 0.3333,
+      "gold_score": 0.0,
+      "n_claims": 3
+    },
+    {
+      "response_id": "L5_015",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.0,
+      "gold_score": 0.5,
+      "n_claims": 6
+    },
+    {
+      "response_id": "L5_016",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.2,
+      "gold_score": 0.6,
+      "n_claims": 5
+    },
+    {
+      "response_id": "L5_017",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.3333,
+      "gold_score": 0.17,
+      "n_claims": 6
+    },
+    {
+      "response_id": "L5_018",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.0,
+      "gold_score": 0.5,
+      "n_claims": 4
+    },
+    {
+      "response_id": "L5_019",
+      "pred_verdict": "Mostly inaccurate",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.3333,
+      "gold_score": 0.17,
+      "n_claims": 6
+    },
+    {
+      "response_id": "L5_020",
+      "pred_verdict": "Mixed factuality",
+      "gold_verdict": "Mixed factuality",
+      "pred_score": 0.3333,
+      "gold_score": 0.17,
+      "n_claims": 6
+    }
+  ]
+}

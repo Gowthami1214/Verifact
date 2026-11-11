@@ -1,0 +1,168 @@
+{
+  "base_model": "microsoft/deberta-v3-small",
+  "output_dir": "C:\\Users\\Gowthami\\TruthSync\\models\\nli\\deberta-v3-small-nli",
+  "best_val_macro_f1": 0.7955,
+  "test_metrics": {
+    "accuracy": 0.5667,
+    "macro_f1": 0.5637,
+    "per_class": {
+      "SUPPORTS": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1": 0.375
+      },
+      "REFUTES": {
+        "precision": 0.4375,
+        "recall": 0.7,
+        "f1": 0.5385
+      },
+      "NOT_ENOUGH_INFO": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1": 0.7778
+      }
+    }
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.3333,
+      "macro_f1": 0.1667,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "REFUTES": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.3333,
+          "recall": 1.0,
+          "f1": 0.5
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.5667,
+      "macro_f1": 0.4533,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 0.4667,
+          "recall": 0.7,
+          "f1": 0.56
+        },
+        "REFUTES": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.8,
+      "macro_f1": 0.7955,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75
+        },
+        "REFUTES": {
+          "precision": 0.6667,
+          "recall": 0.8,
+          "f1": 0.7273
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.8333,
+          "recall": 1.0,
+          "f1": 0.9091
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "accuracy": 0.6667,
+      "macro_f1": 0.6317,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 0.6364,
+          "recall": 0.7,
+          "f1": 0.6667
+        },
+        "REFUTES": {
+          "precision": 0.75,
+          "recall": 0.3,
+          "f1": 0.4286
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "accuracy": 0.6,
+      "macro_f1": 0.5727,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 0.5714,
+          "recall": 0.4,
+          "f1": 0.4706
+        },
+        "REFUTES": {
+          "precision": 0.8,
+          "recall": 0.4,
+          "f1": 0.5333
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.5556,
+          "recall": 1.0,
+          "f1": 0.7143
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "accuracy": 0.6667,
+      "macro_f1": 0.6513,
+      "per_class": {
+        "SUPPORTS": {
+          "precision": 0.7143,
+          "recall": 0.5,
+          "f1": 0.5882
+        },
+        "REFUTES": {
+          "precision": 0.8333,
+          "recall": 0.5,
+          "f1": 0.625
+        },
+        "NOT_ENOUGH_INFO": {
+          "precision": 0.5882,
+          "recall": 1.0,
+          "f1": 0.7407
+        }
+      }
+    }
+  ],
+  "hyperparams": {
+    "epochs": 6,
+    "batch_size": 8,
+    "lr": 2e-05,
+    "max_len": 256,
+    "seed": 42,
+    "warmup": 0.1
+  }
+}

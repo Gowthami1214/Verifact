@@ -1,0 +1,223 @@
+{
+  "optimal_temperature": 1.1348,
+  "uncalibrated": {
+    "ece": 0.081,
+    "brier_score": 0.133,
+    "reliability": {
+      "ece": 0.081,
+      "brier_score": 0.133,
+      "bins": [
+        {
+          "bin": 1,
+          "range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.15
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.2,
+            0.3
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.25
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.3,
+            0.4
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.35
+        },
+        {
+          "bin": 5,
+          "range": [
+            0.4,
+            0.5
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.45
+        },
+        {
+          "bin": 6,
+          "range": [
+            0.5,
+            0.6
+          ],
+          "count": 4,
+          "accuracy": 0.75,
+          "confidence": 0.5564000010490417
+        },
+        {
+          "bin": 7,
+          "range": [
+            0.6,
+            0.7
+          ],
+          "count": 5,
+          "accuracy": 0.0,
+          "confidence": 0.6459000110626221
+        },
+        {
+          "bin": 8,
+          "range": [
+            0.7,
+            0.8
+          ],
+          "count": 8,
+          "accuracy": 0.75,
+          "confidence": 0.7730000019073486
+        },
+        {
+          "bin": 9,
+          "range": [
+            0.8,
+            0.9
+          ],
+          "count": 12,
+          "accuracy": 0.75,
+          "confidence": 0.8694999814033508
+        },
+        {
+          "bin": 10,
+          "range": [
+            0.9,
+            1.0
+          ],
+          "count": 76,
+          "accuracy": 1.0,
+          "confidence": 0.9621000289916992
+        }
+      ]
+    }
+  },
+  "calibrated": {
+    "ece": 0.0721,
+    "brier_score": 0.1325,
+    "reliability": {
+      "ece": 0.0721,
+      "brier_score": 0.1325,
+      "bins": [
+        {
+          "bin": 1,
+          "range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin": 2,
+          "range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.15
+        },
+        {
+          "bin": 3,
+          "range": [
+            0.2,
+            0.3
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.25
+        },
+        {
+          "bin": 4,
+          "range": [
+            0.3,
+            0.4
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.35
+        },
+        {
+          "bin": 5,
+          "range": [
+            0.4,
+            0.5
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.45
+        },
+        {
+          "bin": 6,
+          "range": [
+            0.5,
+            0.6
+          ],
+          "count": 5,
+          "accuracy": 0.6,
+          "confidence": 0.5562000274658203
+        },
+        {
+          "bin": 7,
+          "range": [
+            0.6,
+            0.7
+          ],
+          "count": 4,
+          "accuracy": 0.0,
+          "confidence": 0.6335999965667725
+        },
+        {
+          "bin": 8,
+          "range": [
+            0.7,
+            0.8
+          ],
+          "count": 9,
+          "accuracy": 0.6667,
+          "confidence": 0.7473000288009644
+        },
+        {
+          "bin": 9,
+          "range": [
+            0.8,
+            0.9
+          ],
+          "count": 15,
+          "accuracy": 0.8667,
+          "confidence": 0.8521999716758728
+        },
+        {
+          "bin": 10,
+          "range": [
+            0.9,
+            1.0
+          ],
+          "count": 72,
+          "accuracy": 1.0,
+          "confidence": 0.9462000131607056
+        }
+      ]
+    }
+  }
+}

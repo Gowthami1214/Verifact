@@ -1,0 +1,16 @@
+{
+  "module": "ClaimExtractor",
+  "mode": "rule",
+  "evaluation_scope": "Layer 5 held-out responses",
+  "metrics": {
+    "precision": 1.0000,
+    "recall": 0.9545,
+    "f1_exact_match": 0.9767,
+    "true_positives": 21,
+    "false_positives": 0,
+    "false_negatives": 1,
+    "total_ground_truth": 22,
+    "total_predicted": 21
+  },
+  "audit_note": "Corrected earlier metric bug where non-claim sentences matching GT strings were included in TP, which previously produced an impossible F1 of 1.02. Metric is now strictly bounded in [0, 1]."
+}

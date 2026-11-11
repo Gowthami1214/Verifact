@@ -1,0 +1,51 @@
+{
+  "layer1_nli": {
+    "checked": true,
+    "cross_split_duplicates": 0
+  },
+  "layer2_retrieval": {
+    "passages": 302,
+    "candidates": 1200,
+    "retrieval_test_rows": 500
+  },
+  "layer3_claim_extraction": {
+    "train_docs": 150,
+    "train_annotations": 585,
+    "factual_annotations": 490,
+    "test_annotations": 104
+  },
+  "layer5_heldout": {
+    "responses": 200,
+    "claims": 910,
+    "label_distribution": {
+      "REFUTES": 342,
+      "NOT_ENOUGH_INFO": 215,
+      "SUPPORTS": 353
+    },
+    "duplicate_claims": 354,
+    "cross_split_overlap_with_layer1": 0,
+    "mixed_label_responses": 192,
+    "mixed_label_pct": 96.0,
+    "leakage_keyword_hits": 0,
+    "evidence_rows": 4550,
+    "evidence_role_distribution": {
+      "GOLD_REFUTE": 342,
+      "PARTIAL": 910,
+      "TOPICALLY_RELATED": 910,
+      "IRRELEVANT": 1820,
+      "NEI_EVIDENCE": 215,
+      "GOLD_SUPPORT": 353
+    }
+  },
+  "issues": [
+    {
+      "file": "layer5_heldout/claims",
+      "issue": "duplicate_claims",
+      "count": 354
+    }
+  ],
+  "summary": {
+    "total_issues": 1,
+    "critical_issues": 0
+  }
+}

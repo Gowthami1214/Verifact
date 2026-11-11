@@ -1,0 +1,48 @@
+{
+  "unique_generated_responses": 1000,
+  "claim_level_records": 3996,
+  "class_distribution": {
+    "SUPPORTS": {
+      "count": 1332,
+      "percentage": 33.33
+    },
+    "REFUTES": {
+      "count": 1332,
+      "percentage": 33.33
+    },
+    "NOT_ENOUGH_INFO": {
+      "count": 1332,
+      "percentage": 33.33
+    }
+  },
+  "topic_distribution": {
+    "Companies and organizations": 67,
+    "Medicine and health": 67,
+    "Culture": 67,
+    "Science": 67,
+    "History": 67,
+    "Geography": 67,
+    "Technology": 67,
+    "Space": 67,
+    "Sports": 67,
+    "Politics and government": 67,
+    "Education": 66,
+    "Environment": 66,
+    "Economics": 66,
+    "Famous people": 66,
+    "General knowledge": 66
+  },
+  "difficulty_distribution": {
+    "medium": 1598,
+    "hard": 1598,
+    "easy": 800
+  },
+  "exact_duplicate_claims": 0,
+  "exact_duplicate_generated_responses": 0,
+  "exact_duplicate_evidence": 2996,
+  "missing_value_count": 0,
+  "mixed_label_responses": 1000,
+  "responses_containing_hallucinated_claims": 1000,
+  "cross_split_exact_claim_matches": 0,
+  "construction_note": "Programmatically constructed held-out scenarios using distinct factual propositions from the supplied corpus and excluding exact claim overlap with current train/validation/test/evaluation claims. Human/source verification is recommended before publication as a gold benchmark."
+}

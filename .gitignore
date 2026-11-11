@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Large Model Weights & Checkpoints (>100MB exceeds GitHub push limits)
+# Note: Use Git LFS if you wish to track model weights on GitHub
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+models/**/model.safetensors
+models/**/pytorch_model.bin
+models/nli/deberta-v3-small-nli/model.safetensors
+
+# Vector Store persistent runtime DB
+models/retrieval/chroma_db/
+.chroma/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp files
+*.log
+.pytest_cache/

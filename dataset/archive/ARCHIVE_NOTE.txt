@@ -1,0 +1,11 @@
+ARCHIVE — Layer 3 (original)
+==============================
+These files were retired because:
+  1. Generated texts are template-assembled, not realistic AI outputs.
+  2. Claim text explicitly embeds label-signaling phrases.
+  3. [scenario L3_XXXX] identifiers leak claim identity.
+  4. Evidence is 75% duplicate across claims.
+  5. The same evidence passage is reused for all three label variants per scenario.
+
+Replaced by: layer5_heldout/
+Archive date: 2026-09-13

@@ -1,0 +1,7 @@
+Model,Accuracy,Macro_F1,REFUTES_F1,End_to_End_Accuracy
+Model 1: DeBERTa Baseline,0.4167,0.3732,0.523,0.35
+Model 2: DeBERTa + Cleaned Data,0.4643,0.428,0.582,0.4
+Model 3: DeBERTa + Hard Negatives,0.5238,0.5015,0.641,0.4333
+Model 4: DeBERTa + Class Weighting,0.5595,0.5482,0.675,0.4667
+Model 5: DeBERTa + Calibrated Confidence,0.5714,0.562,0.684,0.4667
+Model 6: Full Optimized Pipeline,0.2458,0.2335,0.1489,0.5
